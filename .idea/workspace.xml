@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="initialize project and add admin">
-      <change afterPath="$PROJECT_DIR$/yamYard/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yamYard/api/urls.py" afterDir="false" />
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="Обновление настроек">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yamYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yamYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yamYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yamYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yamYard/yamYard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/yamYard/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yamYard/yamYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/yamYard/urls.py" afterDir="false" />
     </list>
@@ -35,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "settings.editor.selected.configurable": "org.intellij.sdk.settings.AppSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.intellij.sdk.settings.AppSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\python_programs\pythonProject\yamYardServer" />
@@ -248,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713032446921</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Добавление сериализаторов api, списка всех пользователей и деталей к каждому пользователю">
+      <created>1713108291467</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713108291467</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Обновление настроек">
+      <created>1713131533272</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713131533273</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +291,8 @@
     <MESSAGE value="test discord" />
     <MESSAGE value="test discord 2" />
     <MESSAGE value="initialize project and add admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize project and add admin" />
+    <MESSAGE value="Добавление сериализаторов api, списка всех пользователей и деталей к каждому пользователю" />
+    <MESSAGE value="Обновление настроек" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление настроек" />
   </component>
 </project>

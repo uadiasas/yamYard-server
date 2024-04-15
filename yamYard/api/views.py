@@ -3,11 +3,11 @@ from . import serializers
 from django.contrib.auth.models import User
 
 
-class UserList(generics.ListAPIView):
+class UserAPIList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
 
 
-class UserDetail(generics.RetrieveAPIView):
+class UserAPIDetail(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
