@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="API V1 (только авторизация)">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="Изменил название проекта на правильное">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/yamYardServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yumYardServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yamYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yamYard/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python_programs&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.intellij.sdk.settings.AppSettingsConfigurable&quot;
   }
 }</component>
@@ -281,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713189845962</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Изменил название проекта на правильное">
+      <created>1713192082161</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713192082161</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +321,7 @@
     <MESSAGE value="YY-11 Добавил авторизацию по токенам" />
     <MESSAGE value="YY-11 Исправил ошибки" />
     <MESSAGE value="API V1 (только авторизация)" />
-    <option name="LAST_COMMIT_MESSAGE" value="API V1 (только авторизация)" />
+    <MESSAGE value="Изменил название проекта на правильное" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил название проекта на правильное" />
   </component>
 </project>
