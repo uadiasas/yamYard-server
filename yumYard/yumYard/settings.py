@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-lq6&72b-jq@^)492r-b8_7%mz%9^a+y3nkpg0pu&)uxte&#a&x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.89.63.102', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'rest_framework.authtoken',
     'djoser',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
