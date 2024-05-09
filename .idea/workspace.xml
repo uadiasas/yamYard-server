@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил сваггер">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="удалил ненужную папку">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yumYardServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yumYardServer.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +322,28 @@
       <option name="project" value="LOCAL" />
       <updated>1715241398120</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="убрал авторизацию по токенам и добавил авторизацию по JWT">
+      <created>1715248479777</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1715248479777</updated>
+    </task>
+    <task id="LOCAL-00037" summary="убрал авторизацию по токенам и добавил авторизацию по JWT">
+      <created>1715248486165</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1715248486165</updated>
+    </task>
+    <task id="LOCAL-00038" summary="удалил ненужную папку">
+      <created>1715248530685</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1715248530685</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,6 +380,8 @@
     <MESSAGE value="добавил ip сервера в настройках" />
     <MESSAGE value="убрал ip сервера в настройках" />
     <MESSAGE value="добавил сваггер" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил сваггер" />
+    <MESSAGE value="убрал авторизацию по токенам и добавил авторизацию по JWT" />
+    <MESSAGE value="удалил ненужную папку" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалил ненужную папку" />
   </component>
 </project>
