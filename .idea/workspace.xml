@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил ip сервера в настройках">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="убрал ip сервера в настройках">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/yumYard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714484454117</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="убрал ip сервера в настройках">
+      <created>1715034100495</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715034100495</updated>
+    </task>
+    <task id="LOCAL-00033" summary="убрал ip сервера в настройках">
+      <created>1715034104536</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1715034104536</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,6 +344,7 @@
     <MESSAGE value="API V1 (только авторизация)" />
     <MESSAGE value="Изменил название проекта на правильное" />
     <MESSAGE value="добавил ip сервера в настройках" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил ip сервера в настройках" />
+    <MESSAGE value="убрал ip сервера в настройках" />
+    <option name="LAST_COMMIT_MESSAGE" value="убрал ip сервера в настройках" />
   </component>
 </project>
