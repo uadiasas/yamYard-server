@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил сваггер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/yumYard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
     </list>
@@ -316,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715237436703</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="добавил сваггер">
+      <created>1715241398120</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1715241398120</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
