@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил poetry и docker2" />
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил poetry и docker2">
+      <change afterPath="$PROJECT_DIR$/yumYard/api/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
