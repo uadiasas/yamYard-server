@@ -16,6 +16,7 @@ class Recipe(models.Model):
 
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     user = models.ForeignKey(User, verbose_name='user', related_name='recipes', on_delete=models.CASCADE)
+    #image = models.ImageField(upload_to='recipe_img/', null=True, blank=True)
 
     def __str__(self):
         return self.title
