@@ -14,9 +14,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    followers_count = serializers.ReadOnlyField()
+
     class Meta:
         model = UserProfile
-        fields = ('avatar',)
+        fields = ('avatar', 'followers_count')
 
 
 class RecipeSerializer(serializers.ModelSerializer):
