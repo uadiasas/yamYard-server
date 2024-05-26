@@ -25,7 +25,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments']
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category']
 
 
 class CommentSerializer(serializers.ModelSerializer):

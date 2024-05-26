@@ -30,5 +30,15 @@ class RecipeAPIList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        serializer.save(user=self.request.user)
+
+
+class RecipeAPIUpdate(generics.RetrieveUpdateAPIView):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
+
+
+class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
 

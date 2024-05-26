@@ -15,7 +15,7 @@ class Recipe(models.Model):
     is_public = models.BooleanField(default=True)
 
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='user', related_name='recipes', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
