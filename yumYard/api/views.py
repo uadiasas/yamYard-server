@@ -1,4 +1,8 @@
-from rest_framework import generics, permissions
+from django.shortcuts import get_object_or_404
+from rest_framework import generics, permissions, status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from . import serializers
 from django.contrib.auth.models import User
 from .models import Recipe, UserProfile
@@ -48,3 +52,24 @@ class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
 
+
+class FollowUserView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        user_to_follow = get_object_or_404(UserProfile, user__username=kwargs['username'])
+        if request.user.profile != user_to_follow:
+            user_to_follow.followers.add(request.user)
+            return Response({'status': 'subscribed'}, status=status.HTTP_200_OK)
+        return Response({'status': 'cannot subscribe to yourself'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UnfollowUserView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        user_to_unfollow = get_object_or_404(UserProfile, user__username=kwargs['username'])
+        if request.user.profile != user_to_unfollow:
+            user_to_unfollow.followers.remove(request.user)
+            return Response({'status': 'unsubscribed'}, status=status.HTTP_200_OK)
+        return Response({'status': 'cannot unsubscribe from yourself'}, status=status.HTTP_400_BAD_REQUEST)

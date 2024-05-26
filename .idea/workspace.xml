@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="обновление своего профиля и просмотр чужих">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил количество подписчиков в профиль пользователя">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716759464642</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="добавил количество подписчиков в профиль пользователя">
+      <created>1716763735519</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1716763735519</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete main.py" />
     <MESSAGE value="delete gitignore" />
     <MESSAGE value="del gitignore" />
     <MESSAGE value="add gitignore" />
@@ -439,6 +445,7 @@
     <MESSAGE value="добавил разрешения и необходимые модели" />
     <MESSAGE value="рабочее добавление рецепта" />
     <MESSAGE value="обновление своего профиля и просмотр чужих" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновление своего профиля и просмотр чужих" />
+    <MESSAGE value="добавил количество подписчиков в профиль пользователя" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил количество подписчиков в профиль пользователя" />
   </component>
 </project>
