@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил количество подписчиков в профиль пользователя">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил запросы для подписки и отписки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
     </list>
@@ -406,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716763735519</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="добавил запросы для подписки и отписки">
+      <created>1716765305148</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716765305148</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete gitignore" />
     <MESSAGE value="del gitignore" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="123" />
@@ -446,6 +453,7 @@
     <MESSAGE value="рабочее добавление рецепта" />
     <MESSAGE value="обновление своего профиля и просмотр чужих" />
     <MESSAGE value="добавил количество подписчиков в профиль пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил количество подписчиков в профиль пользователя" />
+    <MESSAGE value="добавил запросы для подписки и отписки" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил запросы для подписки и отписки" />
   </component>
 </project>

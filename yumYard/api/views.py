@@ -20,19 +20,6 @@ class UserAPIDetail(generics.RetrieveAPIView):
     serializer_class = serializers.UserSerializer
 
 
-class UserProfileDetailView(generics.RetrieveAPIView):
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
-    permission_classes = [permissions.AllowAny]
-
-
-class UserProfileUpdateView(generics.RetrieveUpdateAPIView):
-    serializer_class = UserProfileSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def get_object(self):
-        return self.request.user.profile
-
 
 class RecipeAPIList(generics.ListCreateAPIView):
     queryset = Recipe.objects.all()
@@ -53,6 +40,19 @@ class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
     serializer_class = RecipeSerializer
 
 
+
+class UserProfileDetailView(generics.RetrieveAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [permissions.AllowAny]
+
+class UserProfileUpdateView(generics.RetrieveUpdateAPIView):
+    serializer_class = UserProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user.profile
+
 class FollowUserView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
@@ -62,7 +62,6 @@ class FollowUserView(APIView):
             user_to_follow.followers.add(request.user)
             return Response({'status': 'subscribed'}, status=status.HTTP_200_OK)
         return Response({'status': 'cannot subscribe to yourself'}, status=status.HTTP_400_BAD_REQUEST)
-
 
 class UnfollowUserView(APIView):
     permission_classes = [permissions.IsAuthenticated]
