@@ -21,11 +21,12 @@ class UserProfileSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     recipes_count = serializers.SerializerMethodField()
     recipes = serializers.SerializerMethodField()
+    info = serializers.CharField(required=False, allow_blank=True)
 
     class Meta:
         model = UserProfile
         fields = ('avatar', 'followers_count', 'followers', 'following_count', 'following', "username",
-                  'recipes_count', 'recipes')
+                  'recipes_count', 'recipes', 'info')
 
     def get_following_count(self, obj):
         return obj.user.following.count()
