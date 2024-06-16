@@ -17,6 +17,9 @@ urlpatterns = [
     path('categories/', views.CategoryListCreateAPIView.as_view(), name='category-create'),
     path('categories/<int:pk>/', views.CategoryRetrieveUpdateDestroyAPIView.as_view(),
          name='category-retrieve-update-destroy'),
+    path('comments/', views.CommentListCreateAPIView.as_view(), name='comment-list-create'),
+    path('comments/<int:pk>/', views.CommentRetrieveDestroyAPIView.as_view(), name='comment-retrieve-destroy'),
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

@@ -5,11 +5,11 @@ from rest_framework.views import APIView
 
 from . import serializers
 from django.contrib.auth.models import User
-from .models import Recipe, UserProfile, Category
-from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer
+from .models import Recipe, UserProfile, Category, Comment
+from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer
 from .permissions import IsOwnerOrReadOnly, IsAdminUser
 
-
+#Пользователи
 class UserAPIList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
@@ -20,7 +20,7 @@ class UserAPIDetail(generics.RetrieveAPIView):
     serializer_class = serializers.UserSerializer
 
 
-
+#Рецепты
 class RecipeAPIList(generics.ListCreateAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
@@ -40,7 +40,7 @@ class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
     serializer_class = RecipeSerializer
 
 
-
+#Профиль пользователя
 class UserProfileDetailView(generics.RetrieveAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
@@ -52,6 +52,7 @@ class UserProfileUpdateView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user.profile
+
 
 class FollowUserView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -115,6 +116,7 @@ class RemoveFromFavoritesAPIView(generics.UpdateAPIView):
         user_profile.save()
         return Response({"detail": "Recipe removed from favorites."}, status=status.HTTP_200_OK)
 
+#Категории
 class CategoryListCreateAPIView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -125,3 +127,23 @@ class CategoryRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView
     serializer_class = CategorySerializer
     permission_classes = [IsAdminUser]
 
+
+#Комментарии
+class CommentListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class CommentRetrieveDestroyAPIView(generics.RetrieveDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def delete(self, request, *args, **kwargs):
+        comment = self.get_object()
+        if comment.user != request.user:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+        return self.destroy(request, *args, **kwargs)

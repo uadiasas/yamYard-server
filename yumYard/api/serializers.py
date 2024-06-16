@@ -13,13 +13,21 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'recipes', 'comments']
 
 
+class CommentSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
+
+    class Meta:
+        model = Comment
+        fields = ['id', 'content', 'user', 'recipe']
+
+
 class RecipeSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
-    comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    comments = CommentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments', 'category']
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category', 'image']
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -59,12 +67,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 
-class CommentSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
 
-    class Meta:
-        model = Comment
-        fields = ['id', 'content', 'user', 'recipe']
 
 
 class CategorySerializer(serializers.ModelSerializer):
