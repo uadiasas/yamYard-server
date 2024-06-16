@@ -19,10 +19,13 @@ class UserProfileSerializer(serializers.ModelSerializer):
     following_count = serializers.SerializerMethodField()
     following = serializers.SerializerMethodField()
     username = serializers.CharField(source='user.username', read_only=True)
+    recipes_count = serializers.SerializerMethodField()
+    recipes = serializers.SerializerMethodField()
 
     class Meta:
         model = UserProfile
-        fields = ('avatar', 'followers_count', 'followers', 'following_count', 'following', "username")
+        fields = ('avatar', 'followers_count', 'followers', 'following_count', 'following', "username",
+                  'recipes_count', 'recipes')
 
     def get_following_count(self, obj):
         return obj.user.following.count()
@@ -32,6 +35,14 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     def get_followers(self, obj):
         return [user.username for user in obj.followers.all()]
+
+    def get_recipes_count(self, obj):
+        return obj.user.recipes.count()
+
+    def get_recipes(self, obj):
+        recipes = obj.user.recipes.all()
+        return RecipeSerializer(recipes, many=True).data
+
 
 
 class RecipeSerializer(serializers.ModelSerializer):
