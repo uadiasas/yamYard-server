@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил инфо в профиль пользователя">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил категории и их создание админом">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/yumYard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/yumYard/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,20 +83,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710263879166</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add gitignore">
-      <created>1712929279127</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929279127</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add gitignore">
-      <created>1712929491607</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929491607</updated>
     </task>
     <task id="LOCAL-00007" summary="add gitignore2">
       <created>1712929871138</created>
@@ -429,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1718572701197</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="добавил список избранныз рецептов в профиль пользователя">
+      <created>1718573837375</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1718573837375</updated>
+    </task>
+    <task id="LOCAL-00055" summary="добавил категории и их создание админом">
+      <created>1718578169806</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1718578169806</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,8 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initialize project and add admin" />
-    <MESSAGE value="Добавление сериализаторов api, списка всех пользователей и деталей к каждому пользователю" />
     <MESSAGE value="Обновление настроек" />
     <MESSAGE value="YY-11 Добавил авторизацию по токенам" />
     <MESSAGE value="YY-11 Исправил ошибки" />
@@ -469,6 +465,8 @@
     <MESSAGE value="добавил username в профиль пользователя" />
     <MESSAGE value="добавил количество рецептов и рецепты пользователя в профиль пользователя" />
     <MESSAGE value="добавил инфо в профиль пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил инфо в профиль пользователя" />
+    <MESSAGE value="добавил список избранныз рецептов в профиль пользователя" />
+    <MESSAGE value="добавил категории и их создание админом" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил категории и их создание админом" />
   </component>
 </project>

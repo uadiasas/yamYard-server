@@ -14,7 +14,9 @@ urlpatterns = [
     path('profile/update/', views.UserProfileUpdateView.as_view(), name='profile-update'),
     path('profile/favorites/add/', views.AddToFavoritesAPIView.as_view(), name='add-to-favorites'),
     path('profile/favorites/remove/', views.RemoveFromFavoritesAPIView.as_view(), name='remove-from-favorites'),
-
+    path('categories/', views.CategoryListCreateAPIView.as_view(), name='category-create'),
+    path('categories/<int:pk>/', views.CategoryRetrieveUpdateDestroyAPIView.as_view(),
+         name='category-retrieve-update-destroy'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

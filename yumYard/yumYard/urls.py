@@ -18,7 +18,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    path('profile/<int:pk>/', UserProfileDetailView.as_view(), name='profile-detail'),  # Просмотр профиля
+    path('profile/<int:pk>/', UserProfileDetailView.as_view(), name='profile-detail'),
     path('profile/update/', UserProfileUpdateView.as_view(), name='profile-update'),
 ]
 if settings.DEBUG:

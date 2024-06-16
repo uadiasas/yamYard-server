@@ -1,13 +1,13 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import generics, permissions, status
+from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from . import serializers
 from django.contrib.auth.models import User
-from .models import Recipe, UserProfile
-from .serializers import RecipeSerializer, UserProfileSerializer
-from .permissions import IsOwnerOrReadOnly
+from .models import Recipe, UserProfile, Category
+from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer
+from .permissions import IsOwnerOrReadOnly, IsAdminUser
 
 
 class UserAPIList(generics.ListAPIView):
@@ -114,3 +114,14 @@ class RemoveFromFavoritesAPIView(generics.UpdateAPIView):
         user_profile.favorites.remove(recipe)
         user_profile.save()
         return Response({"detail": "Recipe removed from favorites."}, status=status.HTTP_200_OK)
+
+class CategoryListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    permission_classes = [IsAdminUser]
+
+class CategoryRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    permission_classes = [IsAdminUser]
+
