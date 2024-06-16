@@ -72,3 +72,45 @@ class UnfollowUserView(APIView):
             user_to_unfollow.followers.remove(request.user)
             return Response({'status': 'unsubscribed'}, status=status.HTTP_200_OK)
         return Response({'status': 'cannot unsubscribe from yourself'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AddToFavoritesAPIView(generics.UpdateAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        user_profile = self.request.user.profile
+        recipe_id = request.data.get('recipe_id')
+        if not recipe_id:
+            return Response({"detail": "Recipe ID is required."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            recipe = Recipe.objects.get(id=recipe_id)
+        except Recipe.DoesNotExist:
+            return Response({"detail": "Recipe not found."}, status=status.HTTP_404_NOT_FOUND)
+
+        user_profile.favorites.add(recipe)
+        user_profile.save()
+        return Response({"detail": "Recipe added to favorites."}, status=status.HTTP_200_OK)
+
+
+class RemoveFromFavoritesAPIView(generics.UpdateAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        user_profile = self.request.user.profile
+        recipe_id = request.data.get('recipe_id')
+        if not recipe_id:
+            return Response({"detail": "Recipe ID is required."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            recipe = Recipe.objects.get(id=recipe_id)
+        except Recipe.DoesNotExist:
+            return Response({"detail": "Recipe not found."}, status=status.HTTP_404_NOT_FOUND)
+
+        user_profile.favorites.remove(recipe)
+        user_profile.save()
+        return Response({"detail": "Recipe removed from favorites."}, status=status.HTTP_200_OK)

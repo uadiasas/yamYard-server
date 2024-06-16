@@ -13,6 +13,15 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'recipes', 'comments']
 
 
+class RecipeSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
+    comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+    class Meta:
+        model = Recipe
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category']
+
+
 class UserProfileSerializer(serializers.ModelSerializer):
     followers_count = serializers.ReadOnlyField()
     followers = serializers.SerializerMethodField()
@@ -21,12 +30,13 @@ class UserProfileSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     recipes_count = serializers.SerializerMethodField()
     recipes = serializers.SerializerMethodField()
+    favorites = RecipeSerializer(many=True, read_only=True)
     info = serializers.CharField(required=False, allow_blank=True)
 
     class Meta:
         model = UserProfile
         fields = ('avatar', 'followers_count', 'followers', 'following_count', 'following', "username",
-                  'recipes_count', 'recipes', 'info')
+                  'recipes_count', 'recipes', 'info', 'favorites')
 
     def get_following_count(self, obj):
         return obj.user.following.count()
@@ -46,13 +56,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 
-class RecipeSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
-    comments = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
-    class Meta:
-        model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments', 'category']
 
 
 class CommentSerializer(serializers.ModelSerializer):

@@ -7,6 +7,7 @@ class UserProfile(models.Model):
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     followers = models.ManyToManyField(User, related_name='following', blank=True)
     info = models.TextField(blank=True, null=True)
+    favorites = models.ManyToManyField('Recipe', related_name='favorited_by', blank=True)
 
     def __str__(self):
         return self.user.username
