@@ -2,12 +2,15 @@ from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 
 from . import serializers
 from django.contrib.auth.models import User
 from .models import Recipe, UserProfile, Category, Comment
 from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer
 from .permissions import IsOwnerOrReadOnly, IsAdminUser
+from .filters import RecipeFilter
 
 #Пользователи
 class UserAPIList(generics.ListAPIView):
@@ -25,19 +28,23 @@ class RecipeAPIList(generics.ListCreateAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_class = RecipeFilter
+    search_fields = ['title', 'content', 'category__name']
+    ordering_fields = ['title', 'time_created']
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-
 class RecipeAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
-
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 #Профиль пользователя
