@@ -10,8 +10,16 @@ urlpatterns = [
     path('v1/recipedelete/<int:pk>', views.RecipeAPIDelete.as_view()),
     path('profile/<str:username>/follow/', views.FollowUserView.as_view(), name='follow-user'),
     path('profile/<str:username>/unfollow/', views.UnfollowUserView.as_view(), name='unfollow-user'),
-    path('profile/<int:pk>/', views.UserProfileDetailView.as_view(), name='profile-detail'),  # Просмотр профиля
+    path('profile/<int:pk>/', views.UserProfileDetailView.as_view(), name='profile-detail'),
     path('profile/update/', views.UserProfileUpdateView.as_view(), name='profile-update'),
+    path('profile/favorites/add/', views.AddToFavoritesAPIView.as_view(), name='add-to-favorites'),
+    path('profile/favorites/remove/', views.RemoveFromFavoritesAPIView.as_view(), name='remove-from-favorites'),
+    path('categories/', views.CategoryListCreateAPIView.as_view(), name='category-create'),
+    path('categories/<int:pk>/', views.CategoryRetrieveUpdateDestroyAPIView.as_view(),
+         name='category-retrieve-update-destroy'),
+    path('comments/', views.CommentListCreateAPIView.as_view(), name='comment-list-create'),
+    path('comments/<int:pk>/', views.CommentRetrieveDestroyAPIView.as_view(), name='comment-retrieve-destroy'),
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

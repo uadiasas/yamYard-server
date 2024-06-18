@@ -1,4 +1,4 @@
-from rest_framework import permissions
+from rest_framework import viewsets, permissions
 
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
@@ -7,3 +7,8 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
             return True
 
         return obj.owner == request.user
+
+class IsAdminUser(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user and request.user.is_staff
+

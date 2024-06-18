@@ -6,6 +6,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     followers = models.ManyToManyField(User, related_name='following', blank=True)
+    info = models.TextField(blank=True, null=True)
+    favorites = models.ManyToManyField('Recipe', related_name='favorited_by', blank=True)
 
     def __str__(self):
         return self.user.username
@@ -24,7 +26,7 @@ class Recipe(models.Model):
 
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     user = models.ForeignKey(User, verbose_name='user', related_name='recipes', on_delete=models.CASCADE)
-    #image = models.ImageField(upload_to='recipe_img/', null=True, blank=True)
+    image = models.ImageField(upload_to='recipe_img/', null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -42,6 +44,8 @@ class Comment(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='category_images/', null=True, blank=True)
 
     def __str__(self):
         return self.name

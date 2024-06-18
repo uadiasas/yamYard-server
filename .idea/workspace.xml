@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил запросы для подписки и отписки">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил поиск">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,69 +82,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710263879166</updated>
-    </task>
-    <task id="LOCAL-00001" summary="base, main project">
-      <created>1712919856636</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1712919856636</updated>
-    </task>
-    <task id="LOCAL-00002" summary="second commit">
-      <created>1712923037054</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1712923037054</updated>
-    </task>
-    <task id="LOCAL-00003" summary="second commit">
-      <created>1712923055201</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1712923055201</updated>
-    </task>
-    <task id="LOCAL-00004" summary="third commit">
-      <created>1712929181671</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929181671</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add gitignore">
-      <created>1712929279127</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929279127</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add gitignore">
-      <created>1712929491607</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929491607</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add gitignore2">
-      <created>1712929871138</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1712929871138</updated>
-    </task>
-    <task id="LOCAL-00008" summary="delete main.py">
-      <created>1712930038910</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1712930038910</updated>
-    </task>
-    <task id="LOCAL-00009" summary="delete main.py">
-      <created>1712930143491</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1712930143491</updated>
     </task>
     <task id="LOCAL-00010" summary="delete main.py">
       <created>1712930146726</created>
@@ -414,7 +349,84 @@
       <option name="project" value="LOCAL" />
       <updated>1716765305148</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="добавил в профиль пользователя подписки">
+      <created>1716829505086</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1716829505086</updated>
+    </task>
+    <task id="LOCAL-00049" summary="добавил в профиль пользователя подписки">
+      <created>1718476646552</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1718476646552</updated>
+    </task>
+    <task id="LOCAL-00050" summary="убрал валидацию (оставил на длинну &gt; 8 символов)">
+      <created>1718569582809</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1718569582809</updated>
+    </task>
+    <task id="LOCAL-00051" summary="добавил username в профиль пользователя">
+      <created>1718571775498</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1718571775498</updated>
+    </task>
+    <task id="LOCAL-00052" summary="добавил количество рецептов и рецепты пользователя в профиль пользователя">
+      <created>1718572239364</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1718572239364</updated>
+    </task>
+    <task id="LOCAL-00053" summary="добавил инфо в профиль пользователя">
+      <created>1718572701197</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1718572701197</updated>
+    </task>
+    <task id="LOCAL-00054" summary="добавил список избранныз рецептов в профиль пользователя">
+      <created>1718573837375</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1718573837375</updated>
+    </task>
+    <task id="LOCAL-00055" summary="добавил категории и их создание админом">
+      <created>1718578169806</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1718578169806</updated>
+    </task>
+    <task id="LOCAL-00056" summary="добавил категории и их создание админом">
+      <created>1718579062123</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1718579062123</updated>
+    </task>
+    <task id="LOCAL-00057" summary="добавил комментарии">
+      <created>1718581651014</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1718581651014</updated>
+    </task>
+    <task id="LOCAL-00058" summary="добавил поиск">
+      <created>1718586922699</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1718586922699</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -429,15 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="del gitignore" />
-    <MESSAGE value="add gitignore" />
-    <MESSAGE value="123" />
-    <MESSAGE value="test discord" />
-    <MESSAGE value="test discord 2" />
-    <MESSAGE value="initialize project and add admin" />
-    <MESSAGE value="Добавление сериализаторов api, списка всех пользователей и деталей к каждому пользователю" />
-    <MESSAGE value="Обновление настроек" />
-    <MESSAGE value="YY-11 Добавил авторизацию по токенам" />
     <MESSAGE value="YY-11 Исправил ошибки" />
     <MESSAGE value="API V1 (только авторизация)" />
     <MESSAGE value="Изменил название проекта на правильное" />
@@ -454,6 +457,15 @@
     <MESSAGE value="обновление своего профиля и просмотр чужих" />
     <MESSAGE value="добавил количество подписчиков в профиль пользователя" />
     <MESSAGE value="добавил запросы для подписки и отписки" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил запросы для подписки и отписки" />
+    <MESSAGE value="добавил в профиль пользователя подписки" />
+    <MESSAGE value="убрал валидацию (оставил на длинну &gt; 8 символов)" />
+    <MESSAGE value="добавил username в профиль пользователя" />
+    <MESSAGE value="добавил количество рецептов и рецепты пользователя в профиль пользователя" />
+    <MESSAGE value="добавил инфо в профиль пользователя" />
+    <MESSAGE value="добавил список избранныз рецептов в профиль пользователя" />
+    <MESSAGE value="добавил категории и их создание админом" />
+    <MESSAGE value="добавил комментарии" />
+    <MESSAGE value="добавил поиск" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил поиск" />
   </component>
 </project>
