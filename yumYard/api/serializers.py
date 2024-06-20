@@ -30,10 +30,14 @@ class CategorySerializer(serializers.ModelSerializer):
 class RecipeSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
     comments = CommentSerializer(many=True, read_only=True)
-    category = CategorySerializer(read_only=True)
+    category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), source='category')
+
     class Meta:
         model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments', 'category', 'image']
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category_id', 'image']
+
+    def create(self, validated_data):
+        return Recipe.objects.create(**validated_data)
 
 
 class UserProfileSerializer(serializers.ModelSerializer):

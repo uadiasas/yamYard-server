@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил поиск">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="обновил зависимости">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2db5LLRkfOmfrrGydyKI6bd2SAJ" />
   <component name="ProjectViewState">
@@ -82,34 +84,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710263879166</updated>
-    </task>
-    <task id="LOCAL-00012" summary="delete main.py">
-      <created>1712931104476</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1712931104476</updated>
-    </task>
-    <task id="LOCAL-00013" summary="add gitignore">
-      <created>1712931216394</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1712931216394</updated>
-    </task>
-    <task id="LOCAL-00014" summary="delete gitignore">
-      <created>1712931348646</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1712931348646</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add gitignore">
-      <created>1712931727874</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1712931727874</updated>
     </task>
     <task id="LOCAL-00016" summary="add gitignore">
       <created>1712931820380</created>
@@ -426,7 +400,35 @@
       <option name="project" value="LOCAL" />
       <updated>1718588596346</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="обновил зависимости">
+      <created>1718739045481</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1718739045481</updated>
+    </task>
+    <task id="LOCAL-00062" summary="обновил зависимости">
+      <created>1718741655536</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1718741655536</updated>
+    </task>
+    <task id="LOCAL-00063" summary="обновил зависимости">
+      <created>1718741700100</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1718741700100</updated>
+    </task>
+    <task id="LOCAL-00064" summary="обновил зависимости">
+      <created>1718741885015</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1718741885015</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="YY-11 Исправил ошибки" />
     <MESSAGE value="API V1 (только авторизация)" />
     <MESSAGE value="Изменил название проекта на правильное" />
     <MESSAGE value="добавил ip сервера в настройках" />
@@ -466,6 +467,7 @@
     <MESSAGE value="добавил категории и их создание админом" />
     <MESSAGE value="добавил комментарии" />
     <MESSAGE value="добавил поиск" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил поиск" />
+    <MESSAGE value="обновил зависимости" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил зависимости" />
   </component>
 </project>
