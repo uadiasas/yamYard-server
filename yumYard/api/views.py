@@ -7,8 +7,9 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 
 from . import serializers
 from django.contrib.auth.models import User
-from .models import Recipe, UserProfile, Category, Comment
-from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer
+from .models import Recipe, UserProfile, Category, Comment, Rating
+from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer, \
+    RatingSerializer
 from .permissions import IsOwnerOrReadOnly, IsAdminUser
 from .filters import RecipeFilter
 
@@ -45,6 +46,65 @@ class RecipeAPIDelete(generics.RetrieveDestroyAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+#Оценки
+class RatingAPIList(generics.ListCreateAPIView):
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class RatingAPIUpdate(generics.RetrieveUpdateAPIView):
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class RatingAPIDelete(generics.RetrieveDestroyAPIView):
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class RateRecipe(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, recipe_id):
+        user = request.user
+        recipe = Recipe.objects.get(id=recipe_id)
+        rating_value = request.data.get('rating')
+
+        if not 1 <= int(rating_value) <= 5:
+            return Response({"detail": "Rating must be between 1 and 5."}, status=status.HTTP_400_BAD_REQUEST)
+
+        rating, created = Rating.objects.get_or_create(user=user, recipe=recipe, defaults={'rating': rating_value})
+
+        if not created:
+            rating.rating = rating_value
+            rating.save()
+
+        serializer = RatingSerializer(rating)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def put(self, request, recipe_id):
+        user = request.user
+        recipe = Recipe.objects.get(id=recipe_id)
+        rating_value = request.data.get('rating')
+
+        if not 1 <= int(rating_value) <= 5:
+            return Response({"detail": "Rating must be between 1 and 5."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            rating = Rating.objects.get(user=user, recipe=recipe)
+            rating.rating = rating_value
+            rating.save()
+        except Rating.DoesNotExist:
+            return Response({"detail": "Rating does not exist."}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = RatingSerializer(rating)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 #Профиль пользователя

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="обновил зависимости">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="пофиксил добавление рецептов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +88,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710263879166</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add gitignore">
-      <created>1712931820380</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1712931820380</updated>
     </task>
     <task id="LOCAL-00017" summary="add gitignore">
       <created>1712931964465</created>
@@ -428,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718741885015</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="пофиксил добавление рецептов">
+      <created>1718906144767</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1718906144767</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="API V1 (только авторизация)" />
     <MESSAGE value="Изменил название проекта на правильное" />
     <MESSAGE value="добавил ip сервера в настройках" />
     <MESSAGE value="убрал ip сервера в настройках" />
@@ -468,6 +471,7 @@
     <MESSAGE value="добавил комментарии" />
     <MESSAGE value="добавил поиск" />
     <MESSAGE value="обновил зависимости" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил зависимости" />
+    <MESSAGE value="пофиксил добавление рецептов" />
+    <option name="LAST_COMMIT_MESSAGE" value="пофиксил добавление рецептов" />
   </component>
 </project>
