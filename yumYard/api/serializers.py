@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-from api.models import UserProfile, Recipe, Comment, Category
+from api.models import UserProfile, Recipe, Comment, Category, Rating
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -31,13 +31,23 @@ class RecipeSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
     comments = CommentSerializer(many=True, read_only=True)
     category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), source='category')
+    average_rating = serializers.SerializerMethodField()
 
     class Meta:
         model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments', 'category_id', 'image']
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category_id', 'image', 'average_rating']
+
+    def get_average_rating(self, obj):
+        return obj.average_rating()
 
     def create(self, validated_data):
         return Recipe.objects.create(**validated_data)
+
+
+class RatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Rating
+        fields = ['id', 'user', 'recipe', 'rating']
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
