@@ -29,6 +29,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class RecipeSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
+    #user_profile = UserProfileSerializer(read_only=True)
     #user = serializers.ReadOnlyField(source='user.username')
     comments = CommentSerializer(many=True, read_only=True)
     category = CategorySerializer(read_only=True)
@@ -57,6 +58,11 @@ class RecipeSerializer(serializers.ModelSerializer):
     def get_cooking_time(self, obj):
         return obj.cooking_time
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        if instance.cooking_time:
+            representation['cooking_time'] = instance.cooking_time.strftime('%H:%M:%S')
+        return representation
 
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
