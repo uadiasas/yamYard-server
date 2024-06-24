@@ -24,6 +24,8 @@ class Recipe(models.Model):
     time_created = models.DateTimeField(auto_now_add=True)
     time_updated = models.DateTimeField(auto_now=True)
     is_public = models.BooleanField(default=True)
+    #is_favorite = models.BooleanField(default=False)
+    cooking_time = models.TimeField(null=True, blank=True)
 
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     user = models.ForeignKey(User, verbose_name='user', related_name='recipes', on_delete=models.CASCADE)

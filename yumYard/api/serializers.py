@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
+    user = UserSerializer(read_only=True)
 
     class Meta:
         model = Comment
@@ -28,20 +28,34 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
+    user = UserSerializer(read_only=True)
+    #user = serializers.ReadOnlyField(source='user.username')
     comments = CommentSerializer(many=True, read_only=True)
+    category = CategorySerializer(read_only=True)
     category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), source='category')
     average_rating = serializers.SerializerMethodField()
+    is_favorite = serializers.SerializerMethodField()
+    cooking_time = serializers.SerializerMethodField()
 
     class Meta:
         model = Recipe
-        fields = ['id', 'title', 'content', 'user', 'comments', 'category_id', 'image', 'average_rating']
+        fields = ['id', 'title', 'content', 'user', 'comments', 'category_id', 'category', 'image', 'average_rating',
+                  'is_favorite', 'cooking_time']
 
     def get_average_rating(self, obj):
         return obj.average_rating()
 
     def create(self, validated_data):
         return Recipe.objects.create(**validated_data)
+
+    def get_is_favorite(self, obj):
+        request = self.context.get('request', None)
+        if request is None or not request.user.is_authenticated:
+            return False
+        return obj.favorited_by.filter(id=request.user.id).exists()
+
+    def get_cooking_time(self, obj):
+        return obj.cooking_time
 
 
 class RatingSerializer(serializers.ModelSerializer):
