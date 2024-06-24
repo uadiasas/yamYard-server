@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-from django_rest.permissions import IsAuthenticatedOrReadOnly, IsReadOnly
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -11,7 +10,7 @@ from django.contrib.auth.models import User
 from .models import Recipe, UserProfile, Category, Comment, Rating
 from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer, \
     RatingSerializer
-from .permissions import IsOwnerOrReadOnly, IsAdminUser
+from .permissions import IsOwnerOrReadOnly, IsAdminUser, IsReadOnly
 from .filters import RecipeFilter
 
 #Пользователи
@@ -188,7 +187,7 @@ class RemoveFromFavoritesAPIView(generics.UpdateAPIView):
 class CategoryListCreateAPIView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [IsAdminUser | IsReadOnly]
+    permission_classes = [IsAdminUser]
 
 class CategoryRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()

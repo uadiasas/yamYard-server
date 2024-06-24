@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="добавил время готовки и поле избранный ли рецепт">
+    <list default="true" id="f913a9c7-017c-49a4-b6a2-e1e08b28abd2" name="Changes" comment="фикс зависимостей">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yumYard/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yumYard/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yumYard/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yumYard/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +87,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710263879166</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test discord">
+      <created>1713029012906</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713029012906</updated>
     </task>
     <task id="LOCAL-00023" summary="test discord 2">
       <created>1713029219200</created>
@@ -424,14 +431,7 @@
       <option name="project" value="LOCAL" />
       <updated>1718914797127</updated>
     </task>
-    <task id="LOCAL-00071" summary="добавил время готовки и поле избранный ли рецепт">
-      <created>1719252996472</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1719252996472</updated>
-    </task>
-    <option name="localTasksCounter" value="72" />
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -446,6 +446,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="убрал авторизацию по токенам и добавил авторизацию по JWT" />
     <MESSAGE value="удалил ненужную папку" />
     <MESSAGE value="добавил poetry и docker" />
     <MESSAGE value="добавил poetry и docker2" />
@@ -470,7 +471,6 @@
     <MESSAGE value="закоммитил поекти лок" />
     <MESSAGE value="фикс докера" />
     <MESSAGE value="фикс зависимостей" />
-    <MESSAGE value="добавил время готовки и поле избранный ли рецепт" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил время готовки и поле избранный ли рецепт" />
+    <option name="LAST_COMMIT_MESSAGE" value="фикс зависимостей" />
   </component>
 </project>
