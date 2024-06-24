@@ -12,3 +12,7 @@ class IsAdminUser(permissions.BasePermission):
     def has_permission(self, request, view):
         return request.user and request.user.is_staff
 
+class IsReadOnly(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.method in permissions.SAFE_METHODS
+
