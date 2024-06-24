@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+from django_rest.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -188,7 +189,7 @@ class RemoveFromFavoritesAPIView(generics.UpdateAPIView):
 class CategoryListCreateAPIView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser | IsReadOnly]
 
 class CategoryRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
