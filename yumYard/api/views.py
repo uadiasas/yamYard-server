@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-from django_rest.permissions import IsAuthenticatedOrReadOnly
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
