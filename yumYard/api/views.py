@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 from .models import Recipe, UserProfile, Category, Comment, Rating
 from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer, \
     RatingSerializer
-from .permissions import IsOwnerOrReadOnly, IsAdminUser
+from .permissions import IsOwnerOrReadOnly, IsAdminUser, IsReadOnly
 from .filters import RecipeFilter
 
 #Пользователи
