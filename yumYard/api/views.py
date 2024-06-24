@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django_rest.permissions import IsAuthenticatedOrReadOnly
+from django_rest.permissions import IsAuthenticatedOrReadOnly, IsReadOnly
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -11,8 +11,7 @@ from django.contrib.auth.models import User
 from .models import Recipe, UserProfile, Category, Comment, Rating
 from .serializers import RecipeSerializer, UserProfileSerializer, CategorySerializer, CommentSerializer, \
     RatingSerializer
-from .permissions import IsOwnerOrReadOnly, IsAdminUser, IsReadOnly
-
+from .permissions import IsOwnerOrReadOnly, IsAdminUser
 from .filters import RecipeFilter
 
 #Пользователи
