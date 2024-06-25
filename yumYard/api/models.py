@@ -13,9 +13,13 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+    def is_sub(self, user):
+        return self.followers.filter(id=user.id).exists()
+
     @property
     def followers_count(self):
         return self.followers.count()
+
 
 
 class Recipe(models.Model):
