@@ -80,11 +80,12 @@ class UserProfileSerializer(serializers.ModelSerializer):
     recipes = serializers.SerializerMethodField()
     favorites = RecipeSerializer(many=True, read_only=True)
     info = serializers.CharField(required=False, allow_blank=True)
+    is_sub = serializers.SerializerMethodField()
 
     class Meta:
         model = UserProfile
         fields = ('avatar', 'followers_count', 'followers', 'following_count', 'following', "username",
-                  'recipes_count', 'recipes', 'info', 'favorites')
+                  'recipes_count', 'recipes', 'info', 'favorites', 'is_sub')
 
     def get_following_count(self, obj):
         return obj.user.following.count()
@@ -102,8 +103,11 @@ class UserProfileSerializer(serializers.ModelSerializer):
         recipes = obj.user.recipes.all()
         return RecipeSerializer(recipes, many=True).data
 
-
-
+    def get_is_sub(self, obj):
+        request = self.context.get('request', None)
+        if request is None or request.user.is_anonymous:
+            return False
+        return obj.is_sub(request.user)
 
 
 
